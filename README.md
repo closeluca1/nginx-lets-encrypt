@@ -50,3 +50,9 @@ sudo opt/certbot/certbot-auto --nginx
 ```
 sudo systemctl reaload nginx
 ```
+
+##### opcional 
+acessar o crontab e adicionar uma renovação automática do ssl
+```
+0 3 * * 1 /opt/certbot/certbot-auto --nginx renew --quiet --non-interactive >> /var/log/letsencrypt-renew.log
+```
